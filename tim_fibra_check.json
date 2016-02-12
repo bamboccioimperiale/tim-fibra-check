@@ -2,11 +2,7 @@
   "type": "script",
   "seleniumVersion": "2",
   "formatVersion": 2,
-  "steps": [
-    {
-      "type": "print",
-      "text": "Starting test with params ${prefix}-${telnumber} --> ${fiscalcode}"
-    },
+  "steps": [    
     {
       "type": "get",
       "url": "https://ecommerce.tim.it/compra/adsl/it/2456"
