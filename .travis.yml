@@ -2,4 +2,4 @@ language: node_js
 before_script:
     - "npm install -g se-interpreter"
 script:
-    - "se-interpreter tim_fibra_check.json"
+    - "se-interpreter tim_fibra_interpreter.json"
