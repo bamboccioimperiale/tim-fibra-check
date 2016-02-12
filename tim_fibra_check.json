@@ -1,0 +1,67 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "print",
+      "text": "Starting test with params ${prefix}-${telnumber} --> ${fiscalcode}"
+    },
+    {
+      "type": "get",
+      "url": "https://ecommerce.tim.it/compra/adsl/it/2456"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-e0"
+      },
+      "text": "${prefix}"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-e1"
+      },
+      "text": "${telnumber}"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-e2"
+      },
+      "text": "${fiscalcode}"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='codFisc']/div[3]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "edit-sub0"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Il codice dell’evento è: W9"
+    }
+  ],
+  "data": {
+    "configs": {
+      "json": {
+        "path": "tim-fibra-check-config.json"
+      }
+    },
+    "source": "json"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
